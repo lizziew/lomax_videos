@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lomax Demo Videos</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+    <script src="//api.simile-widgets.org/exhibit/current/exhibit-api.js"></script>
+
+	<link rel='stylesheet' href='//www.simile-widgets.org/styles/common.css' type='text/css' />
+
+	<link href="/javascripts/videosessions.json" type="application/json" rel="exhibit/data" />
+	<link href="/javascripts/schema.js" type="application/json" rel="exhibit/data" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	
+	<link rel="exhibit-extension" type="text/javascript" href="//api.simile-widgets.org/exhibit/current/extensions/time/time-extension.js"/>
+	<link rel="exhibit-extension" href="//projects.csail.mit.edu/exhibit/api/extensions/flotr/flotr-extension.js"/>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+	<!--<link rel="exhibit-extension" type="text/javascript" href="//api.simile-widgets.org/exhibit/2.2.0/extensions/map/map-extension.js?gmapkey="/>-->
+
+	<link rel="exhibit-extension" type="text/javascript" href="http://api.simile-widgets.org/exhibit/3.1.0rc/extensions/map/map-extension.js" />
+
+    <script src="http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js"></script>
+
+	<style>
+	  .logo {
+	  text-align: center
+	  }
+	  .lens-table {
+	  width: 100%
+	  }
+	  .lens-table td {
+	  padding: 10px
+	  }
+	</style>
+
+  </head>
+  <body>
+		<nav class="navbar navbar-inverse">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <a class="navbar-brand" href="#">Lomax Demo -- Videos</a>
+	        </div>
+	      </div>
+	    </nav>
+	    <div class="row">
+	      <div class="col-md-1"></div>
+	      <div class="col-md-10">
+	        <div data-ex-role="viewPanel">
+	          <div data-ex-role="view" data-ex-view-class="Timeline" data-ex-start=".StartDate" data-ex-color-key=".Subregion" data-ex-top-band-unit="year" data-ex-top-band-pixels-per-unit="150" data-ex-bottom-band-pixels-per-unit="100"> 
+	            <div data-ex-role="lens">
+	            	<span data-ex-content=".Setting"></span> ... <span data-ex-content=".SessionNotes"></span>
+	            </div>
+	          </div>
+
+	          <div data-ex-role="view" data-ex-view-class="Tabular" data-ex-columns=".SessionName,.StartDate,.PPL,.Subregion,.Setting,.SessionNotes" data-ex-column-labels="Name,Start Date,City,County,Setting,Description"></div>
+
+        	 <div data-ex-role="view" data-ex-view-class="Map" data-ex-latlng=".latlng" data-ex-center="36.1627, -86.7816" data-ex-zoom="5" data-ex-map-height="500" data-show-header="false" data-ex-latlngOrder="lnglat">
+        	 	<div data-ex-role="lens">
+                	<span data-ex-content=".SessionName"></span> ... <span data-ex-content=".Setting"></span> ... <span data-ex-content=".SessionNotes"></span>
+ 			 </div>
+ 			 
+
+
+
+            
+ 
+
+
+
+
+
+
+	        </div>
+	      </div>
+	      <div class="col-md-1"></div>
+	    </div>
+
+
+  </body>
+  <script>
+
+  </script> 
+</html>
